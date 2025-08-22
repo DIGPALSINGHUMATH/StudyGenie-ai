@@ -21,9 +21,9 @@ public class DocSummary {
     @JoinColumn(name = "doc_id", nullable = false)
     private Document document;
 
-    private String modelName;
+//    private String modelName;
     @Lob
     private String summaryMd;
-    private LocalDateTime createdAt;
+//    private LocalDateTime createdAt;
 }
 

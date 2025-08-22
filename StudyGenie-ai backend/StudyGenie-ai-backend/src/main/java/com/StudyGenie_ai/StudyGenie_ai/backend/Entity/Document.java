@@ -2,6 +2,7 @@ package com.StudyGenie_ai.StudyGenie_ai.backend.Entity;
 
 import com.StudyGenie_ai.StudyGenie_ai.backend.Entity.quiz.Quiz;
 
+import com.fasterxml.jackson.module.jsonSchema.annotation.Link;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -31,7 +32,7 @@ public class Document {
 
     private String title;
     private String filePath;
-    private Integer pageCount;
+//    private Integer pageCount;
     private LocalDateTime importedAt;
 
     // Relationships
@@ -43,5 +44,7 @@ public class Document {
 
     @OneToMany(mappedBy = "document", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Quiz> quizzes;
+
+
 }
 
