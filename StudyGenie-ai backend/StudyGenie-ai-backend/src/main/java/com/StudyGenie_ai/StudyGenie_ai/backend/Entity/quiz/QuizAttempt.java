@@ -1,6 +1,11 @@
 package com.StudyGenie_ai.StudyGenie_ai.backend.Entity.quiz;
+import com.StudyGenie_ai.StudyGenie_ai.backend.Entity.Student;
+//import com.StudyGenie_ai.StudyGenie_ai.backend.controller.Student;
 import jakarta.persistence.*;
 import lombok.*;
+
+import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Table(name = "quiz_attempt")
@@ -21,7 +26,7 @@ public class QuizAttempt {
 
     @ManyToOne
     @JoinColumn(name = "user_id", nullable = false)
-    private AppUser user;
+    private Student user;
 
     private LocalDateTime startedAt;
     private LocalDateTime completedAt;

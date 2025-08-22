@@ -24,7 +24,7 @@ public class Flashcard {
 
     @ManyToOne
     @JoinColumn(name = "subject_id", nullable = false)
-    private Subject subject;
+    private Subj subject;
 
     private String frontText;
     private String backText;

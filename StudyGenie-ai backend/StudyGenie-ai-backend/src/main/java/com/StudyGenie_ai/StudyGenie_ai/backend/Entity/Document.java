@@ -27,7 +27,7 @@ public class Document {
 
     @ManyToOne
     @JoinColumn(name = "subject_id", nullable = false)
-    private Subject subject;
+    private Subj subject;
 
     private String title;
     private String filePath;

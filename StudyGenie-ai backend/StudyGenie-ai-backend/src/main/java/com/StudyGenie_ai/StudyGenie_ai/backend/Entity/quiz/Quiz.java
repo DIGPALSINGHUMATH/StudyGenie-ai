@@ -2,7 +2,7 @@ package com.StudyGenie_ai.StudyGenie_ai.backend.Entity.quiz;
 
 import com.StudyGenie_ai.StudyGenie_ai.backend.Entity.Document;
 import com.StudyGenie_ai.StudyGenie_ai.backend.Entity.Student;
-import com.StudyGenie_ai.StudyGenie_ai.backend.Entity.Subject;
+import com.StudyGenie_ai.StudyGenie_ai.backend.Entity.Subj;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -28,7 +28,7 @@ public class Quiz {
 
     @ManyToOne
     @JoinColumn(name = "subject_id", nullable = false)
-    private Subject subject;
+    private Subj subject;
 
     @ManyToOne
     @JoinColumn(name = "doc_id")

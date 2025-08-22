@@ -1,4 +1,5 @@
 package com.StudyGenie_ai.StudyGenie_ai.backend.Entity;
+
 import com.StudyGenie_ai.StudyGenie_ai.backend.Entity.quiz.Quiz;
 import jakarta.persistence.*;
 import lombok.*;
@@ -12,8 +13,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Subject {
-
+public class Subj {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long subjectId;
@@ -41,4 +41,3 @@ public class Subject {
     @OneToMany(mappedBy = "subject", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Task> tasks;
 }
-

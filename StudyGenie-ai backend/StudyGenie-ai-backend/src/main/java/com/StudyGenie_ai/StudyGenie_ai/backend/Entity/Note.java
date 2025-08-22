@@ -18,12 +18,12 @@ public class Note {
     private Long noteId;
 
     @ManyToOne
-    @JoinColumn(name = "student_id", nullable = false)
+    @JoinColumn(name = "user_id", nullable = false)
     private Student user;
 
     @ManyToOne
     @JoinColumn(name = "subject_id", nullable = false)
-    private Subject subject;
+    private Subj subject;
 
     @ManyToOne
     @JoinColumn(name = "doc_id")
